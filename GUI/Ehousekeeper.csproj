@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05993907-9601-4E6A-A97F-7CB3691A553A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>Ehousekeeper</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>yiLogo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A3F59E8E3B2636E2811157CBC67A3BD302FFF8BD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GUI_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FastScan_API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\FastScan_API.dll</HintPath>
+    </Reference>
+    <Reference Include="HingeScan_API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\HingeScan_API.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="OpenHardwareMonitorLib, Version=0.4.0.4, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\智慧安全\GUI\bin\x86\Release\OpenHardwareMonitorLib.dll</HintPath>
+    </Reference>
+    <Reference Include="SelfScan_API, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\SelfScan_API.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="version, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Release\version.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CircleProgramBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TestByWinRing0.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenLibSys.cs" />
+    <Compile Include="PersistentSetting.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateVisitor.cs" />
+    <Compile Include="优化加速.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="优化加速.Designer.cs">
+      <DependentUpon>优化加速.cs</DependentUpon>
+    </Compile>
+    <Compile Include="切换皮肤.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="切换皮肤.Designer.cs">
+      <DependentUpon>切换皮肤.cs</DependentUpon>
+    </Compile>
+    <Compile Include="垃圾清理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="垃圾清理.Designer.cs">
+      <DependentUpon>垃圾清理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具箱.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具箱.designer.cs">
+      <DependentUpon>工具箱.cs</DependentUpon>
+    </Compile>
+    <Compile Include="开始体检.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="开始体检.Designer.cs">
+      <DependentUpon>开始体检.cs</DependentUpon>
+    </Compile>
+    <Compile Include="托盘菜单.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="托盘菜单.Designer.cs">
+      <DependentUpon>托盘菜单.cs</DependentUpon>
+    </Compile>
+    <Compile Include="木马查杀.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="木马查杀.Designer.cs">
+      <DependentUpon>木马查杀.cs</DependentUpon>
+    </Compile>
+    <Compile Include="查杀记录.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="查杀记录.Designer.cs">
+      <DependentUpon>查杀记录.cs</DependentUpon>
+    </Compile>
+    <Compile Include="桌面监视器.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="桌面监视器.Designer.cs">
+      <DependentUpon>桌面监视器.cs</DependentUpon>
+    </Compile>
+    <Compile Include="检查更新.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="检查更新.Designer.cs">
+      <DependentUpon>检查更新.cs</DependentUpon>
+    </Compile>
+    <Compile Include="软件管家.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="软件管家.Designer.cs">
+      <DependentUpon>软件管家.cs</DependentUpon>
+    </Compile>
+    <Compile Include="隔离区.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="隔离区.Designer.cs">
+      <DependentUpon>隔离区.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="优化加速.resx">
+      <DependentUpon>优化加速.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="切换皮肤.resx">
+      <DependentUpon>切换皮肤.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="垃圾清理.resx">
+      <DependentUpon>垃圾清理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具箱.resx">
+      <DependentUpon>工具箱.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="开始体检.resx">
+      <DependentUpon>开始体检.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="托盘菜单.resx">
+      <DependentUpon>托盘菜单.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="木马查杀.resx">
+      <DependentUpon>木马查杀.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="查杀记录.resx">
+      <DependentUpon>查杀记录.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="桌面监视器.resx">
+      <DependentUpon>桌面监视器.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="检查更新.resx">
+      <DependentUpon>检查更新.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="软件管家.resx">
+      <DependentUpon>软件管家.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="隔离区.resx">
+      <DependentUpon>隔离区.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BenNHControl\BenNHControl.csproj">
+      <Project>{8d4e9176-79a8-4f7f-9efe-18e379b73d3f}</Project>
+      <Name>BenNHControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\notifytitleBackgroundImage.png" />
+    <Content Include="yiLogo.ico" />
+    <None Include="Resources\Circular.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\open.png" />
+    <None Include="bin\x86\Release\images\wallpaper1.png" />
+    <None Include="bin\x86\Release\images\wallpaper2.png" />
+    <None Include="bin\x86\Release\images\wallpaper3.png" />
+    <None Include="bin\x86\Release\images\wallpaper4.png" />
+    <None Include="bin\x86\Release\images\wallpaper5.png" />
+    <None Include="bin\x86\Release\images\wallpaper6.png" />
+    <None Include="bin\x86\Release\images\wallpaper7.png" />
+    <None Include="bin\x86\Release\images\wallpaper8.png" />
+    <None Include="bin\x86\Release\images\wallpaper9.png" />
+    <None Include="bin\x86\Release\images\wallpaper10.png" />
+    <None Include="bin\x86\Release\images\wallpaper11.png" />
+    <None Include="bin\x86\Release\images\wallpaper12.png" />
+    <None Include="images\title.png" />
+    <None Include="images\fk_off.png" />
+    <None Include="images\jb_off.png" />
+    <None Include="images\tc_off.png" />
+    <None Include="images\fk_on.png" />
+    <None Include="images\jb_on.png" />
+    <None Include="images\tc_on.png" />
+    <Content Include="Properties\toolItem10.Image.png" />
+    <Content Include="Properties\toolItem11.Image.png" />
+    <Content Include="Properties\toolItem12.Image.png" />
+    <Content Include="Properties\toolItem13.Image.png" />
+    <Content Include="Properties\toolItem14.Image.png" />
+    <Content Include="Properties\toolItem15.Image.png" />
+    <Content Include="Properties\toolItem16.Image.png" />
+    <Content Include="Properties\toolItem17.Image.png" />
+    <Content Include="Properties\toolItem18.Image.png" />
+    <Content Include="Resources\6.jpg" />
+    <None Include="Resources\RAM.png" />
+    <None Include="Resources\CPU.png" />
+    <None Include="Resources\cloud.png" />
+    <None Include="Resources\indicator_arrows_black.gif" />
+    <None Include="Resources\indicator_circle_thickbox.gif" />
+    <None Include="bin\x86\Release\ico\GoogleEarthPortable.ico" />
+    <None Include="bin\x86\Release\ico\iFlyIMEGuide.ico" />
+    <None Include="bin\x86\Release\ico\U盘设备工具箱.ico" />
+    <Content Include="ico.ico" />
+    <None Include="Resources\beijing.jpg" />
+    <None Include="Resources\pifu.png" />
+    <None Include="Resources\indicator_waitanim.gif" />
+    <None Include="Resources\indicator_mozilla_yellow.gif" />
+    <None Include="Resources\indicator_mozilla_yellow1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Shell32">
+      <Guid>{50A7E9B0-70EF-11D1-B75A-00A0C90564FE}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
