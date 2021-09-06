@@ -6,5 +6,14 @@
 - 模仿腾讯电脑管家的简单软件
 
 ## 部分截图
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+![木马查杀主页](/publicImage/图片1.png)
+![检查更新主页](/publicImage/图片4.png)
+![托盘菜单](/publicImage/图片2.png)
+![实时资源监控](/publicImage/图片3.png)
+![云引擎服务器版主页](/publicImage/图片5.png)
+![优化加速主页](/publicImage/图片6.png)
+
+## 程序流程图
+![程序流程图](/publicImage/图片7.png)
+
+
